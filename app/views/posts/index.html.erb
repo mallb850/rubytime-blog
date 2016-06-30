@@ -1,0 +1,12 @@
+
+       <div class="flex-boxes">
+          <% @post.each do |t| %>
+           <div class="flex-box flex-box-big">
+                 <%= image_tag t.image.url(:medium) %>  
+                <h1 class="flex-title"><%= t.title %></h1>
+                <p><%= t.body %></p>
+                <%= link_to "Read", posts_show_path %>
+           </div>   
+          <% end %>
+        </div>  
+        
